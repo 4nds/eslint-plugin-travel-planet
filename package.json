@@ -1,0 +1,46 @@
+{
+  "_from": "eslint-plugin-travel-planet",
+  "_id": "eslint-plugin-travel-planet@1.0.1",
+  "_phantomChildren": {},
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_spec": "eslint-plugin-travel-planet",
+  "_where": "C:\\Users\\Dimitri",
+  "author": {
+    "name": "Cyprien dker",
+    "email": "cyprien@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/TravelPlanetNDF/tp-lint/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "eslint": "^4.8.0"
+  },
+  "deprecated": false,
+  "description": "A plugin for the ESLint linter that adds more naming conventions for variables and functions.",
+  "homepage": "https://github.com/TravelPlanetNDF/tp-lint",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "snake-case",
+    "snakecase",
+    "snake_case",
+    "underscore-case",
+    "underscore_case",
+    "upper-camel-case",
+    "upper-camelcase"
+  ],
+  "license": "ISC",
+  "main": "Source/Index.js",
+  "name": "eslint-plugin-travel-planet",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TravelPlanetNDF/tp-lint.git"
+  },
+  "scripts": {
+    "test": "eslint Source"
+  },
+  "version": "1.0.1"
+}
