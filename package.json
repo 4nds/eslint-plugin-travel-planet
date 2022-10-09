@@ -16,7 +16,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "eslint": "^4.8.0"
+    "eslint": "^8.25.0"
   },
   "deprecated": false,
   "description": "A plugin for the ESLint linter that adds more naming conventions for variables and functions.",
