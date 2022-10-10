@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eslint": "^8.25.0",
+    "eslint-plugin-travel-planet": "file:.."
+  }
+}
