@@ -64,7 +64,7 @@ module.exports = {
           {
             var module_name;
             // init.arguments is an array of the arguments being passed to the callee,
-            // undefinied if the variable isn't being initialized to a function, or at all.
+            // undefined if the variable isn't being initialized to a function, or at all.
             // Unlike the declarations, we won't iterate over this
             // because we only care about the first argument.
             if (declaration.init.arguments[0].type === `TemplateLiteral`)
