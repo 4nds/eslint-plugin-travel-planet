@@ -1,7 +1,5 @@
 const common = require(`../Common.js`);
 
-// module.exports = function(context)
-// {
 module.exports = {
   meta: { fixable: `code` },
   create(context)

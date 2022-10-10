@@ -31,8 +31,6 @@ function CheckVariable(context, node)
   }
 }
 
-// module.exports = function(context)
-// {
 module.exports = {
   meta: { fixable: `code` },
   create(context)
