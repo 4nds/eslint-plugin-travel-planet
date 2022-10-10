@@ -10,6 +10,10 @@ module.exports = {
         if (node.parent.type !== `VariableDeclarator`)
           return;
 
+        // skip declarations of variables to arrow functions
+        if (node.parent.init.type === `ArrowFunctionExpression`)
+          return;
+
         const source_code = context.getSourceCode();
         const variable_name = source_code.getText(node);
         if (!new RegExp(`${common.snake_case_regex}|${common.upper_camel_case_regex}`, `g`)
