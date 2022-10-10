@@ -1,6 +1,6 @@
 {
     "_from": "eslint-plugin-travel-planet",
-    "_id": "eslint-plugin-travel-planet@1.0.1",
+    "_id": "eslint-plugin-travel-planet@1.1.1",
     "_spec": "eslint-plugin-travel-planet",
     "bugs": {
         "url": "https://github.com/4nds/eslint-plugin-travel-planet/issues"
@@ -35,7 +35,7 @@
         "run_test": "eslint tests",
         "test": "npm run setup_test && npm run run_test"
     },
-    "version": "1.0.1",
+    "version": "1.1.1",
     "devDependencies": {
         "eslint-plugin-jsdoc": "^39.3.6"
     }
