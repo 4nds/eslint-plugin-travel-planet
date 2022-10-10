@@ -38,10 +38,12 @@ module.exports = {
   create(context)
   {
     return {
-      // When a new variable is declared. This is where we whitelist nodes to check function calls of.
+      // When a new variable is declared.
+      // This is where we whitelist nodes to check function calls of.
       VariableDeclaration: function(node)
       {
-        // declarations is an array of the comma-separated variable declarations like "var foo, zerp;"
+        // declarations is an array of the comma-separated
+        // variable declarations like "var foo, zerp;"
         node.declarations.forEach(declaration =>
         {
           // id contains info about the variable being declare.
@@ -50,10 +52,10 @@ module.exports = {
           if (variable_whitelist.indexOf(variable_name) > -1)
             return;
 
-          // init contains info about the value being initialized to. It is null when the variable is
-          // being declared without being initialized.
-          // If initialization type is "CallExpression", that means that the variable is being
-          // initialized to a function.
+          // init contains info about the value being initialized to.
+          // It is null when the variable is being declared without being initialized.
+          // If initialization type is "CallExpression",
+          // that means that the variable is being initialized to a function.
           // init.callee contains info about the function that the value is being initialized to,
           // undefined if it's not being initialized to a function, or at all.
           // So, this filters down into variables being initialized to the "require" function.
@@ -61,14 +63,16 @@ module.exports = {
           declaration.init.callee.name === `require`)
           {
             var module_name;
-            // init.arguments is an array of the arguments being passed to the callee, undefinied if
-            // the variable isn't being initialized to a function, or at all. Unlike the declarations,
-            // we won't iterate over this because we only care about the first argument.
+            // init.arguments is an array of the arguments being passed to the callee,
+            // undefinied if the variable isn't being initialized to a function, or at all.
+            // Unlike the declarations, we won't iterate over this
+            // because we only care about the first argument.
             if (declaration.init.arguments[0].type === `TemplateLiteral`)
-              // The quasis array is a bit weird. Parsed template literals have them, and the number
-              // of elements is equal to the number of placeholders, plus one for the non-placeholder
-              // section. However, the values of the placeholder sections are always empty, so I'm
-              // not sure what purpose they serve.
+              // The quasis array is a bit weird. Parsed template literals have them,
+              // and the number of elements is equal to the number of placeholders,
+              // plus one for the non-placeholder section.
+              // However, the values of the placeholder sections are always empty,
+              // so I'm not sure what purpose they serve.
               // This takes the cooked non-placeholder portion as-is.
               module_name = declaration.init.arguments[0].quasis[0].value.cooked;
             else if (declaration.init.arguments[0].type === `Literal`)
@@ -77,9 +81,9 @@ module.exports = {
             else
               // Something other than `, ', or "? ¯\_(ツ)_/¯
               return;
-            // Detect if the module is being included via a path. This means that it is a part of the
-            // project, and not from an external dependency. This means that it's alright to correct
-            // the case in it.
+            // Detect if the module is being included via a path.
+            // This means that it is a part of the project, and not from an external dependency.
+            // This means that it's alright to correct the case in it.
             if (module_name.includes(`/`))
               variable_whitelist.push(variable_name);
           }
@@ -87,15 +91,13 @@ module.exports = {
       },
       Identifier: function(node)
       {
-        const ALLOWED_PARENTS = [
-          `ClassDeclaration`,
-        ];
+        const ALLOWED_PARENTS = [`ClassDeclaration`,];
         if (ALLOWED_PARENTS.indexOf(node.parent.type) === -1)
           return;
-        // The Espree parser will count function parameters as FunctionDeclarations here, which isn't
-        // particularly desirable. The parent of a function name refers to itself, and the parent of a
-        // function parameter refers to the function name (And not itself.), so we can use this to
-        // exclude function parameters.
+        // The Espree parser will count function parameters as FunctionDeclarations here,
+        // which isn't particularly desirable. The parent of a function name refers to itself,
+        // and the parent of a function parameter refers to the function name (And not itself.),
+        // so we can use this to exclude function parameters.
         if (node.parent.type === ALLOWED_PARENTS[0] && node.name !== node.parent.id.name)
           return;
         // Constructors have to be named the way they are.
