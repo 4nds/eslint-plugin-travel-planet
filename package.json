@@ -10,8 +10,8 @@
         "snake_case",
         "underscore-case",
         "underscore_case",
-        "upper-camel-case",
-        "upper-camelcase"
+        "camel-case",
+        "camelcase"
     ],
     "homepage": "https://github.com/4nds/eslint-plugin-travel-planet/",
     "bugs": {
@@ -26,7 +26,7 @@
     "main": "Source/Index.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/4nds/eslint-plugin-travel-planet.git"
+        "url": "https://github.com/4nds/eslint-plugin-travel-planet.git"
     },
     "scripts": {
         "setup_test": "cd tests && npm install ../",
