@@ -18,6 +18,11 @@
         "url": "https://github.com/4nds/eslint-plugin-travel-planet/issues"
     },
     "license": "ISC",
+    "author": "Cyprien dker",
+    "contributors": [
+        "Cyprien dker",
+        "4nds (https://github.com/4nds/)"
+    ],
     "main": "Source/Index.js",
     "repository": {
         "type": "git",
