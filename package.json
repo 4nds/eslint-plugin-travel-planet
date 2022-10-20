@@ -1,7 +1,4 @@
 {
-    "_from": "eslint-plugin-travel-planet",
-    "_id": "eslint-plugin-travel-planet@1.1.1",
-    "_spec": "eslint-plugin-travel-planet",
     "name": "eslint-plugin-travel-planet",
     "version": "1.1.1",
     "description": "A plugin for the ESLint linter that adds more naming conventions for variables and functions.",
@@ -36,7 +33,5 @@
     },
     "devDependencies": {
         "eslint-plugin-jsdoc": "^39.3.6"
-    },
-    "bundleDependencies": [],
-    "deprecated": false
+    }
 }
