@@ -2,16 +2,9 @@
     "_from": "eslint-plugin-travel-planet",
     "_id": "eslint-plugin-travel-planet@1.1.1",
     "_spec": "eslint-plugin-travel-planet",
-    "bugs": {
-        "url": "https://github.com/4nds/eslint-plugin-travel-planet/issues"
-    },
-    "bundleDependencies": [],
-    "dependencies": {
-        "eslint": "^8.25.0"
-    },
-    "deprecated": false,
+    "name": "eslint-plugin-travel-planet",
+    "version": "1.1.1",
     "description": "A plugin for the ESLint linter that adds more naming conventions for variables and functions.",
-    "homepage": "https://github.com/4nds/eslint-plugin-travel-planet/",
     "keywords": [
         "eslint",
         "eslint-plugin",
@@ -23,9 +16,12 @@
         "upper-camel-case",
         "upper-camelcase"
     ],
+    "homepage": "https://github.com/4nds/eslint-plugin-travel-planet/",
+    "bugs": {
+        "url": "https://github.com/4nds/eslint-plugin-travel-planet/issues"
+    },
     "license": "ISC",
     "main": "Source/Index.js",
-    "name": "eslint-plugin-travel-planet",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/4nds/eslint-plugin-travel-planet.git"
@@ -35,8 +31,12 @@
         "run_test": "eslint tests",
         "test": "npm run setup_test && npm run run_test"
     },
-    "version": "1.1.1",
+    "dependencies": {
+        "eslint": "^8.25.0"
+    },
     "devDependencies": {
         "eslint-plugin-jsdoc": "^39.3.6"
-    }
+    },
+    "bundleDependencies": [],
+    "deprecated": false
 }
