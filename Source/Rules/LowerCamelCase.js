@@ -10,7 +10,7 @@ function CheckVariable(context, node)
   {
     context.report({
       node: node,
-      message: `Class, function, or method '{{name}}' is not in upper camel case.`,
+      message: `Class, function, or method '{{name}}' is not in lower camel case.`,
       data: {name: node.name},
       fix: function(original_fixer)
       {
