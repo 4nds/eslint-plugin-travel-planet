@@ -1,4 +1,4 @@
-const common = require(`../common.js.js`);
+const common = require(`../common.js.js.js.js.js.js`);
 
 var variable_whitelist = [];
 
